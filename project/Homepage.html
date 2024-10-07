@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<!-- Copyright 2023 The MediaPipe Authors.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. -->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>My new skin color</title>
+    <!--Öffentliche Scripts für das mash und video Bearbeitung-->
+    <script src="ml5_min2.js"></script>
+    <script src="p5_sound_min.js"></script>
+
+    <!-- camera -->
+    <script src="camera.js" ></script>
+    <script src="p5.js"></script>
+    <script src="p5_min.js"></script>
+
+    <link rel="stylesheet" href="prop.css"></link>
+</head>
+<body> <!--"Kamera wird hier eingebaut"-->
+    <h1>How can I change my face color?</h1>      
+    <p>Select your desired color</p>
+    <table> <!--tr ... table row; th ... table heading; td ... table data-->
+        <tr>
+            <th>Face Mask</th>
+            <th>Lips</th>
+            <th>Mouth</th>
+            <th>Left Eye</th>
+            <th>Right Eye</th>
+            <th>Normal Face</th>
+            <th>Colered Face</th>
+        </tr>
+
+        <tr>
+            <td><input value="F_mask" type="checkbox" id="check1"></td>
+            <td><input value="lip" type="checkbox" id="check2"></td>
+            <td><input value="mou" type="checkbox" id="check3"></td>
+            <td><input value="L_eye" type="checkbox" id="check4"></td>
+            <td><input value="R_eye" type="checkbox" id="check5"></td>
+            <td><input value="N_face" type="checkbox" id="check6"></td>
+            <td><input value="F_color_tone" type="checkbox" id="check7"></td> <!-- colored Face == value, is the same-->
+        </tr>
+
+        <tr>
+            <td><input type="color" id="col_1" name="col1" value="#ff0000"></td>
+            <td><input type="color" id="col_2" name="col2" value="#ff0000"></td>
+            <td><input type="color" id="col_3" name="col3" value="#ff0000"></td>
+            <td><input type="color" id="col_4" name="col4" value="#ff0000"></td>
+            <td><input type="color" id="col_5" name="col5" value="#ff0000"> </td>
+            <td><input type="color" id="col_6" name="col6" value="#ff0000"></td>
+            <td><input type="color" id="col_7" name="col7" value="#ff0000"></td>
+        </tr>
+
+        <tr>
+            <td><input type="range" min="1" max="100" value="50" id="meinRang1"></td>
+            <td><input type="range" min="1" max="100" value="50" id="meinRang2"></td>
+            <td><input type="range" min="1" max="100" value="50" id="meinRang3"></td>
+            <td><input type="range" min="1" max="100" value="50" id="meinRang4"></td>
+            <td><input type="range" min="1" max="100" value="50" id="meinRang5"></td>
+            <td><input type="range" min="1" max="100" value="50" id="meinRang6"></td>
+            <td><input type="range" min="1" max="100" value="50" id="meinRang7"></td>
+        </tr>
+
+        <tr>
+            <td><label id="Rang1"></label></td>
+            <td><label id="Rang2"></label></td>
+            <td><label id="Rang3"></label></td>
+            <td><label id="Rang4"></label></td>
+            <td><label id="Rang5"></label></td>
+            <td><label id="Rang6"></label></td>
+            <td><label id="Rang7"></label></td>
+        </tr>
+    </table>
+</body>
+</html>
